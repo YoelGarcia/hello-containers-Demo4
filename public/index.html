@@ -1,0 +1,292 @@
+
+<html>
+  <head>
+	  <style>
+			body, html {
+			  height: 100%;
+			  margin: 0;
+			}
+
+			.bg {
+			  /* The image used */
+			  background-image: url("img/ibm-cloud-bg.jpg");
+
+			  /* Full height */
+        height: 100%;
+         
+
+			  /* Center and scale the image nicely */
+			  background-position: center;
+			  background-repeat: no-repeat;
+			  background-size: cover;
+      }
+
+      /*img {
+        display: block;
+        margin: 0 auto;
+        max-width: 100%;
+        width: 80%;
+      }*/
+      </style>
+      <title>IBM Conecta 2020</title>
+      <link rel="icon" type="image/png" href="img/ibm-icon.png" />
+  </head>
+  <body  class="bg">
+    <!--<script>
+      window.onload = function () {
+   
+        var c = document.getElementById("miCanvas");
+        document.getElementById('descargar').onclick = function(){
+   
+          let filename = prompt("Guardar como",""),
+          link = document.createElement('a');
+   
+          if (filename == null){//si el usiario dio cancelar
+            return false;
+          }
+          else if (filename == ""){//si el usuario le dio click y no puso nombre al archivo
+            link.download = "Sin título.png";
+            link.href = c.toDataURL("image/png");//usa la imagen del canvas
+          }
+          else{//si el usuario le dio aceptar y puso un nombre al archivo
+            link.download = filename + ".png";
+            link.href = c.toDataURL("image/png");
+          }
+          link.click();
+        }
+        //o puedes usar una minilibreria que hice https://www.lawebdelprogramador.com/codigo/JavaScript/4290-libreria-canvas-JavaScript.html
+   
+      };
+    </script>-->
+    <!--<script>
+        function descargarContacto(){
+          var source = 'img/ibm-cloud-bg.jpg';
+
+          var a = document.createElement('a');
+
+          a.download = true;
+          a.target = '_blank';
+          a.href= source;
+
+          a.click();
+        }
+
+    </script>-->
+    <!--<script>
+		  function calculaMensualidad()
+		  {
+			if (esNumerico(document.getElementById("monto").value)&&esNumerico(document.getElementById("duracion").value)&&esNumerico(document.getElementById("tasa").value))
+				{
+						const Http = new XMLHttpRequest();
+						const url='/apicalcula/?monto='+document.getElementById("monto").value+'&duracion='+document.getElementById("duracion").value+'&tasa='+document.getElementById("tasa").value;
+						Http.open("GET", url);
+						Http.send();
+						Http.onreadystatechange=(e)=>{
+										var respuesta=Http.responseText.replace(/"{\\"montoPago\\":\\"/g,"");
+										respuesta=respuesta.replace(/\\"}"/g,"");
+										document.getElementById("mensualidad").value=respuesta;
+									  }
+				}
+			  else{ alert("Los únicos valores aceptados son numéricos, favor de revisar");}
+		  }
+			function esNumerico(n) 
+			{
+			  return !isNaN(parseFloat(n)) && isFinite(n);
+			}
+	 </script>-->
+      <div align="center">
+        <table width="652" cellspacing="0" cellpadding="0" border="0">
+            <tr>
+              <td style='vertical-align:middle'><img src="img/ibm.png" alt="IBM Cloud" width="80"> </td>
+              <td valign="center"><h1><strong><font color="white">Cloud Conecta 2020</font></strong></h1></td>
+            </tr>
+            <!--<tr>
+              <td colspan="5" width="625">
+                <p><font color="white">Encuesta de Feedback</font>
+				        </p>
+              </td>
+            </tr>-->
+        </table>
+      </div>
+      <div align="center">
+        <table width="652" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+              <p><font color="white">Encuesta de Feedback</font>
+              </p>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <p></p>
+      </div>
+      <div align="center">
+        <table width="625" cellspacing="0" cellpadding="0" border="0">
+            <tr>
+              <td>
+                <p class="MsoNormal" style="text-align:right" align="right">
+                <span style="color:white;mso-themecolor:background1">¿Que te esta pareciendo el evento?</span>
+                </p>
+              </td>
+              <td>
+          <!--<p style="text-align:justify"><input value="1000000" id="monto" type="float"></p>-->
+              <select id="evento">
+                <option value="excelente">Excelente</option>
+                <option value="bien">Bien</option>
+                <option value="regular">Regular</option>
+                <option value="malo">Malo</option>
+              </select>
+              </td>
+            </tr>
+            <tr>
+              <td><p><br/></p></td>
+            </tr>
+            <tr>
+              <td>
+                <p align="right"><span style="color:white;mso-themecolor:background1">¿Que te parece la sesion?</span></p>
+              </td>
+              <td >
+                <!--<p style="text-align:justify"><input value="180" id="duracion" type="float"</p>-->
+                <select id="evento">
+                  <option value="excelente">Excelente</option>
+                  <option value="bien">Bien</option>
+                  <option value="regular">Regular</option>
+                  <option value="malo">Malo</option>
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <td><p><br/></p></td>
+            </tr>
+            <tr>
+              <td style="padding:0in 1pt 0in 5.4pt">
+                <p align="right"><span style="color:white;mso-themecolor:background1">¿Conocias la nube de IBM?</span></p>
+              </td>
+              <td>
+                <!--<p style="text-align:justify"><input value="14" id="tasa" type="float"</p>-->
+                <select id="nube-ibm">
+                  <option value="si">Si</option>
+                  <option value="no">No</option>
+                </select>
+              </td>
+          </tr>
+         <tr>
+             <td><p><br/></p></td>
+          </tr>
+          <!--Aqui se agregaron las demas preguntas-->
+          <tr>
+            <td style="padding:0in 1pt 0in 5.4pt">
+              <p align="right"><span style="color:white;mso-themecolor:background1">¿Tienes aplicaciones contenerizadas?</span></p>
+            </td>
+            <td>
+              <!--<p style="text-align:justify"><input value="14" id="tasa" type="float"</p>-->
+              <select id="aplicaciones">
+                <option value="si">Si</option>
+                <option value="no">No</option>
+              </select>
+            </td>
+        </tr>
+        <tr>
+          <td><p><br/></p></td>
+        </tr>
+        <tr>
+          <td style="padding:0in 1pt 0in 5.4pt">
+            <p align="right"><span style="color:white;mso-themecolor:background1">¿Necesitas ayuda para modernizar tus aplicaciones?</span></p>
+          </td>
+          <td>
+            <!--<p style="text-align:justify"><input value="14" id="tasa" type="float"</p>-->
+            <select id="modernizar">
+              <option value="si">Si</option>
+              <option value="no">No</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td><p><br/></p></td>
+        </tr>
+        <tr>
+          <td style="padding:0in 1pt 0in 5.4pt">
+            <p align="right"><span style="color:white;mso-themecolor:background1">¿Cual es tu plataforma de orquestacion de contenedores?</span></p>
+          </td>
+          <td>
+            <p style="text-align:justify"><input value="" id="plataforma" type="text"</p>
+          </td>
+        </tr>
+        <tr>
+          <td><p><br/></p></td>
+        </tr>
+        <tr>
+          <td style="padding:0in 1pt 0in 5.4pt">
+            <p align="right"><span style="color:white;mso-themecolor:background1">¿Necesitas que te contactemos para ayudarte?</span></p>
+          </td>
+          <td>
+            <!--<p style="text-align:justify"><input value="14" id="tasa" type="float"</p>-->
+            <select id="ayuda">
+              <option value="si">Si</option>
+              <option value="no">No</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td><p><br/></p></td>
+        </tr>
+        <tr>
+          <td style="padding:0in 1pt 0in 5.4pt">
+            <p align="right"><span style="color:white;mso-themecolor:background1">¿Conoces las promos de IBM?</span></p>
+          </td>
+          <td>
+            <!--<p style="text-align:justify"><input value="14" id="tasa" type="float"</p>-->
+            <select id="promos">
+              <option value="si">Si</option>
+              <option value="no">No</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td><p><br/></p></td>
+        </tr>
+        <tr>
+          <td style="padding:0in 1pt 0in 5.4pt">
+            <p align="right"><span style="color:white;mso-themecolor:background1">Email:</span></p>
+          </td>
+          <td>
+            <p style="text-align:justify"><input value="" id="email" type="text"</p>
+          </td>
+        </tr>
+        <tr>
+          <td><p><br/></p></td>
+        </tr>
+        <tr>
+          <td style="padding:0in 1pt 0in 5.4pt">
+            <p align="right"><span style="color:white;mso-themecolor:background1">Nombre</span></p>
+          </td>
+          <td>
+            <p style="text-align:justify"><input value="" id="nombre" type="text"</p>
+          </td>
+        </tr>
+        <tr>
+          <td><p><br/></p></td>
+        </tr>
+        <tr>
+          <td style="padding:0in 1pt 0in 5.4pt">
+            <p align="right"><span style="color:white;mso-themecolor:background1">Telefono</span></p>
+          </td>
+          <td>
+            <p style="text-align:justify"><input value="" id="telefono" type="text"</p>
+          </td>
+        </tr>
+			<tr><td> <br></tr>
+			<tr><td> <br></tr>
+        <tr style="mso-yfti-irow:3;mso-yfti-lastrow:yes">
+          <td> <!--<p align="right"> <input value="Contactos" id="descargar" type="button" href="img/ibm.png" download="contactos.png"> </p>-->
+            <a href="img/ibm.png" download="contactos.png"> Contactos</a>
+          </td>
+          <td>
+            <p class="MsoNormal" style="text-align:justify"><input value="Promociones" id="promociones" type="button"></span></p>
+          </td>
+        </tr>
+        </table>
+      </div>
+      <p class="MsoNormal"><span style="mso-fareast-font-family:&quot;Times New Roman&quot;"><o:p>&nbsp;</o:p></span></p>
+    </div>
+  </body>
+</html>
