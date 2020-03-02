@@ -27,6 +27,27 @@
         max-width: 100%;
         width: 80%;
       }*/
+      a {    
+        font-family: verdana, arial, sans-serif;
+        font-size: 10pt;
+        font-weight: bold;
+        padding: 4px;
+        background-color: #ffffff;
+        color: #666666;
+        text-decoration: none;
+      }
+      a:link, a:visited {
+        border-top: 1px solid #cccccc;
+        border-bottom: 2px solid #666666;
+        border-left: 1px solid #cccccc;
+        border-right: 2px solid #666666;
+      }
+      a:hover {
+          border-bottom: 1px solid #cccccc;
+        border-top: 2px solid #666666;
+        border-right: 1px solid #cccccc;
+        border-left: 2px solid #666666;
+      }
       </style>
       <title>IBM Conecta 2020</title>
       <link rel="icon" type="image/png" href="img/ibm-icon.png" />
@@ -278,11 +299,14 @@
 			<tr><td> <br></tr>
         <tr style="mso-yfti-irow:3;mso-yfti-lastrow:yes">
           <td> <!--<p align="right"> <input value="Contactos" id="descargar" type="button" href="img/ibm.png" download="contactos.png"> </p>-->
-            <a href="img/contactos.png" download="contactos.png">Contactos</a>
+            <p align="right"><a href="img/contactos.png" download="contactos.png" class="enlanceboton">Contactos</a></p>
           </td>
+          <td></td>
           <td>
-            <p class="MsoNormal" style="text-align:justify"><input value="Promociones" id="promociones" type="button"></span></p>
+            <!--<p class="MsoNormal" style="text-align:justify"><input value="Promociones" id="promociones" type="button"></span></p>-->
+            <a href="#" download="contactos.png" class="enlanceboton">Promociones</a>
           </td>
+          
         </tr>
         </table>
       </div>
